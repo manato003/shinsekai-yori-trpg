@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install konva react-konva)",
+      "Bash(npx shadcn@latest add dialog --yes)",
+      "Bash(npx tsc --noEmit)"
+    ]
+  }
+}

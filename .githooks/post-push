@@ -1,0 +1,27 @@
+#!/bin/bash
+# post-push: GitHub push 後に PJ 教訓を pending-promotions に同期する
+#
+# このフックは git push が成功したあとに自動実行される。
+# tasks/lessons.md のスナップショットを親ディレクトリの
+# docs/pending-promotions/ に配置する。
+# 次回の Claude セッション開始時に汎用教訓として昇格処理が行われる。
+
+HOOKS_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(cd "$HOOKS_DIR/.." && pwd)"
+PROJECT_NAME="$(basename "$PROJECT_DIR")"
+DOCS_DIR="$(cd "$PROJECT_DIR/../../docs" && pwd)"
+PENDING_DIR="$DOCS_DIR/pending-promotions"
+
+mkdir -p "$PENDING_DIR"
+
+LESSONS_SRC="$PROJECT_DIR/tasks/lessons.md"
+LESSONS_DST="$PENDING_DIR/${PROJECT_NAME}-lessons.md"
+
+if [ -f "$LESSONS_SRC" ]; then
+    cp "$LESSONS_SRC" "$LESSONS_DST"
+    echo "[knowledge-sync] tasks/lessons.md → docs/pending-promotions/${PROJECT_NAME}-lessons.md"
+else
+    echo "[knowledge-sync] tasks/lessons.md が見つかりません。スキップします。"
+fi
+
+exit 0
