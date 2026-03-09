@@ -1,4 +1,4 @@
-# CLAUDE.md - 新世界よりTRPG
+# CLAUDE.md - ScanOcrProject
 
 このファイルは新しいチャットセッション開始時に必ず読み込むこと。
 共通ワークフロー・原則は親ディレクトリの `~/.claude/CLAUDE.md` に定義されており、自動適用される。
@@ -16,7 +16,7 @@
 
 ### よく使うコマンド
 ```bash
-cd projects/新世界よりTRPG/scan
+cd C:/Dev/projects/ScanOcrProject/scan
 
 # テスト（1枚 + ground_truth 比較）
 .venv/Scripts/python ocr_novel.py \
@@ -34,7 +34,7 @@ cd projects/新世界よりTRPG/scan
 ## セッション開始時のチェックリスト（省略不可）
 
 - [ ] このファイルを読む
-- [ ] `../../docs/lessons-global.md`（汎用教訓・全PJ共通）を読む
+- [ ] `C:/Dev/claude/docs/lessons-global.md`（汎用教訓・全PJ共通）を読む
 - [ ] `tasks/lessons.md`（このPJ固有の教訓）を読む
 
 ---
