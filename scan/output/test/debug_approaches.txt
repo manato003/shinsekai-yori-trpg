@@ -1,0 +1,17 @@
+[32m2026-03-05 17:07:36.310[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m16[0m - [1mLoading OCR model from kha-white/manga-ocr-base[0m
+Loading weights:   0%|          | 0/264 [00:00<?, ?it/s]Loading weights: 100%|██████████| 264/264 [00:00<00:00, 27113.70it/s]
+The tied weights mapping and config for this model specifies to tie decoder.bert.embeddings.word_embeddings.weight to decoder.cls.predictions.decoder.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+The tied weights mapping and config for this model specifies to tie decoder.cls.predictions.bias to decoder.cls.predictions.decoder.bias, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+[1mMangaOcrModel LOAD REPORT[0m from: kha-white/manga-ocr-base
+Key                                  | Status     |  | 
+-------------------------------------+------------+--+-
+decoder.bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+[32m2026-03-05 17:07:38.869[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m22[0m - [1mUsing CUDA[0m
+[32m2026-03-05 17:07:39.833[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m35[0m - [1mOCR ready[0m
+Padded size: (199, 775)
+A (padded 200px wide): 深夜、あなりが静かになってから、燈子に体験。
+B (chunked 300+50overlap): 「深夜、あたりが静 が静かになってから、 ら、椅子に深く腰を そういえば、
+C (wider 65px crop): 深夜、あなりが静かになってから、椅子に深く

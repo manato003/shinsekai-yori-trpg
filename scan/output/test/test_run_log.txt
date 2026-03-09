@@ -1,0 +1,71 @@
+[32m2026-03-05 17:14:06.099[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m16[0m - [1mLoading OCR model from kha-white/manga-ocr-base[0m
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+OCRエンジン: manga-ocr（Ollamaフォールバック: qwen2.5vl:7b）
+画像枚数   : 1 枚（テストモード）
+出力先     : output\test\shinsekaiyori.md
+────────────────────────────────────────
+Loading weights:   0%|          | 0/264 [00:00<?, ?it/s]Loading weights: 100%|██████████| 264/264 [00:00<00:00, 26559.60it/s]
+The tied weights mapping and config for this model specifies to tie decoder.bert.embeddings.word_embeddings.weight to decoder.cls.predictions.decoder.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+The tied weights mapping and config for this model specifies to tie decoder.cls.predictions.bias to decoder.cls.predictions.decoder.bias, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+[1mMangaOcrModel LOAD REPORT[0m from: kha-white/manga-ocr-base
+Key                                  | Status     |  | 
+-------------------------------------+------------+--+-
+decoder.bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+[32m2026-03-05 17:14:08.602[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m22[0m - [1mUsing CUDA[0m
+[32m2026-03-05 17:14:09.528[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m35[0m - [1mOCR ready[0m
+  --- ground_truth
+  +++ OCR結果
+  @@ -1,31 +1,26 @@
+  -１
+  -　深夜、あたりが静かになってから、椅子に深く腰
+  +深夜、あたりが静かになってから、椅子に深く腰
+   掛けて、目を閉じてみることがある。
+  -　浮かんでくるのは、判で押したように、いつも同
+  +「浮かんでくるのは、判で押したように、いつも同じ
+   じ光景だ。
+  -　お堂の暗闇をバックに護摩壇の上で燃えさかる
+  -炎。地の底から響いてくる真言(マントラ)の朗唱に、合いの手
+  +お堂の暗闇をバックに護摩壇の上で燃えさかる。
+  +炎。地の底から響いてくる真言の朗唱に、合いの手、
+   を入れるように弾ける、オレンジ色の火の粉。
+  -　そのたびに、なぜこの光景なのだろうと不思議に
+  -なる。
+  -　私が十二歳だったあの晩からは、すでに二十
+  -三年の月日が流れた。その間、本当に様々な出
+  -来事があった。想像だにしていなかった悲しく恐ろ
+  -しい事件も。わたしが、それまで信じてきたこと
+  -は、すべて、根底から覆されてしまったはずであ
+  -る。
+  -　それなのに、今でも最初に頭に浮かぶのは、どう
+  -して、あの晩のことなのだろう。
+  -　わたしに与えられた催眠暗示は、それほど強力だ
+  +そのたびに、なぜこの光景なのだろうと不思議に
+  +「わたしが十二歳だったあの晩からは、すでにニ十
+  +三年の月日が流れた。その間、本当にさまざまな出
+  +来事があった。想像だにしていなかった悲しく恐ろ．ｎｏ
+  +しい事件も。わたしが、それまで信じてきたこと、
+  +は、すべて、根底から覆されてしまうったはずであ、
+  +それなのに、今でも最初に頭に浮かぶのは、どうして
+  +して、あの晩のこととなのだろう。
+  +わたしに与えられた催眠暗示は、そのれほど強力だ。
+   ったのか。
+  -ときどき、わたしは、いまだに洗脳から脱し切っ
+  -ていないような気さえするのだ。
+  -
+  -　今ごろになって、一連の事件の顚末を書き記す気
+  [   1/1] shinsekaiyori_010.png  (556文字)  残り約0秒
+────────────────────────────────────────
+完了！  1枚  合計556文字  0分14秒
+出力完了: output\test\shinsekaiyori.md
+
+──────────────────────────────────────────────────
+  ground_truth 比較: ground_truth_010.txt
+  文字一致率: 94.2%  (正解 512 文字 / OCR 531 文字)
+
+  --- diff（抜粋）---
+  ... (14 行省略)
+──────────────────────────────────────────────────
+

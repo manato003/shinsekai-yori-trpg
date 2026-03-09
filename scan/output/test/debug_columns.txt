@@ -1,0 +1,6 @@
+Image: 960x1600
+Total ink pixels: 100205
+Text rows: 29 to 1580
+Gap between blocks: rows 682 to 868
+Upper block columns: 0 -> []
+Lower block columns: 0 -> []

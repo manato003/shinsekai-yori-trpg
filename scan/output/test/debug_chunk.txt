@@ -1,0 +1,24 @@
+[32m2026-03-05 17:06:23.097[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m16[0m - [1mLoading OCR model from kha-white/manga-ocr-base[0m
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/264 [00:00<?, ?it/s]Loading weights: 100%|██████████| 264/264 [00:00<00:00, 25764.26it/s]
+The tied weights mapping and config for this model specifies to tie decoder.bert.embeddings.word_embeddings.weight to decoder.cls.predictions.decoder.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+The tied weights mapping and config for this model specifies to tie decoder.cls.predictions.bias to decoder.cls.predictions.decoder.bias, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+[1mMangaOcrModel LOAD REPORT[0m from: kha-white/manga-ocr-base
+Key                                  | Status     |  | 
+-------------------------------------+------------+--+-
+decoder.bert.embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+[32m2026-03-05 17:06:25.591[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m22[0m - [1mUsing CUDA[0m
+[32m2026-03-05 17:06:26.555[0m | [1mINFO    [0m | [36mmanga_ocr.ocr[0m:[36m__init__[0m:[36m35[0m - [1mOCR ready[0m
+=== FULL COLUMN (no chunking) ===
+突然、あなたが静かになってから、椅子に深く腰を
+
+=== CHUNKED (200px each) ===
+Chunk 0: 深夜、あた
+Chunk 1: だりが静かにな
+Chunk 2: ってから、椅子
+Chunk 3: 手に深く腰を
+
+Full chunked: 深夜、あた | だりが静かにな | ってから、椅子 | 手に深く腰を

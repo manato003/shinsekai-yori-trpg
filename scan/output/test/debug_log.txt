@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<string>", line 17, in <module>
+  File "C:\Users\manat\OneDrive\Desktop\claude\projects\V¢ŠE‚æ‚èTRPG\scan\.venv\Lib\site-packages\ollama\_client.py", line 365, in chat
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\manat\OneDrive\Desktop\claude\projects\V¢ŠE‚æ‚èTRPG\scan\.venv\Lib\site-packages\ollama\_client.py", line 189, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manat\OneDrive\Desktop\claude\projects\V¢ŠE‚æ‚èTRPG\scan\.venv\Lib\site-packages\ollama\_client.py", line 133, in _request_raw
+    raise ResponseError(e.response.text, e.response.status_code) from None
+ollama._types.ResponseError: an error was encountered while running the model: GGML_ASSERT(a->ne[2] * 4 == b->ne[0]) failed (status code: 500)
+PNG count: 958
+Target file: shinsekaiyori_010.png
+File size: 82,705 bytes
+Base64 length: 110,276
