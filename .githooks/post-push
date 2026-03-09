@@ -9,7 +9,7 @@
 HOOKS_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(cd "$HOOKS_DIR/.." && pwd)"
 PROJECT_NAME="$(basename "$PROJECT_DIR")"
-DOCS_DIR="$(cd "$PROJECT_DIR/../../docs" && pwd)"
+DOCS_DIR="$(cd "$PROJECT_DIR/../../claude/docs" && pwd)"
 PENDING_DIR="$DOCS_DIR/pending-promotions"
 
 mkdir -p "$PENDING_DIR"
