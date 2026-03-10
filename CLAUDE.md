@@ -31,6 +31,17 @@ cd C:/Dev/projects/ScanOcrProject/scan
 
 ---
 
+## 推奨スキル（このPJ向け）
+
+| 場面 | スキル |
+|---|---|
+| デバッグ | `C:/Dev/claude/skills/antigravity/debugging-strategies/` |
+| コードレビュー | `C:/Dev/claude/skills/antigravity/code-reviewer/` |
+| API設計（Next.js側） | `C:/Dev/claude/skills/antigravity/api-design-principles/` |
+| PostgreSQL最適化 | `C:/Dev/claude/skills/antigravity/postgres-best-practices/` |
+
+---
+
 ## セッション開始時のチェックリスト（省略不可）
 
 - [ ] このファイルを読む
